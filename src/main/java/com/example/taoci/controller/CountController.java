@@ -26,7 +26,7 @@ public class CountController {
 
     @RequestMapping("/hello")
     public String aa(){
-        String ss="baga";
+        String ss="ixixix";
         return ss;
     }
 
