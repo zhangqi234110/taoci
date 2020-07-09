@@ -32,7 +32,7 @@ public class CountController {
 
 
     @RequestMapping("/hello1")
-    public String aa(){
+    public String xs(){
         String aa="这是同时新添加的";
         return aa;
     }
