@@ -30,6 +30,8 @@ public class CountController {
     }
 
 
+
+
     @RequestMapping("/list")
     public String list(@RequestParam("name") String name, @RequestParam("password") String password, Model model){
         User login = userService.login(name, password);
