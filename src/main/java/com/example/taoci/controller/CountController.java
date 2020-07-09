@@ -25,8 +25,9 @@ public class CountController {
     private CountService countService;
 
     @RequestMapping("/hello")
-    public String dd(){
-        return null;
+    public String aa(){
+        String ss="你好啊";
+        return ss;
     }
 
 
