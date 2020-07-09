@@ -26,7 +26,7 @@ public class CountController {
 
     @RequestMapping("/hello")
     public String aa(){
-        String ss="ixixix";
+        String ss="我是同事新添加的代码";
         return ss;
     }
 
