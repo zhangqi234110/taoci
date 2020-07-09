@@ -24,6 +24,12 @@ public class CountController {
     @Autowired
     private CountService countService;
 
+    @RequestMapping("/hello")
+    public String aa(){
+        return null;
+    }
+
+
     @RequestMapping("/list")
     public String list(@RequestParam("name") String name, @RequestParam("password") String password, Model model){
         User login = userService.login(name, password);
