@@ -16,7 +16,7 @@ import java.util.Date;
 import java.util.List;
 
 @Controller
-@RequestMapping("/mycount")
+@RequestMapping("/zhangdan")
 public class CountController {
     @Autowired
     private UserService userService;
