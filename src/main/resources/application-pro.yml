@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://121.196.15.202/zhangqi?serverTimezone=GMT
+    username: root
+    password: 123456
+  thymeleaf:
+    prefix: classpath:/templates/
+    check-template-location: true
+    suffix: .html
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+      #mode: HTML5
+      #cache: false
+    mode: HTML5
+    cache: false
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.example.taoci.pojo
+
+server:
+  port: 8080
+
+logging:
+  file:
+    path: /usr/local/taocilog

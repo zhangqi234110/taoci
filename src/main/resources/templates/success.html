@@ -1,10 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>成功页面</title>
+    <title>账单页面</title>
 </head>
-<body>
-成功啦！
+<body style="background-color: mediumseagreen">
+
+<div >
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <p th:text="${name}"></p>
+                </td>
+                <td>
+                    <img style="width: 60px;height: 70px"  th:src="@{/head.jpg}"></img>
+
+                </td>
+            </tr>
+        </table>
+        <form >
+            <table style="align-content: center" border="1px">
+                <tr>
+                    <td>编号</td>
+                    <td>姓名</td>
+                    <td>金额</td>
+                    <td>日期</td>
+                    <td>手机号</td>
+                </tr>
+                <tr th:each="count:${count}">
+                    <td th:text="${count.id}"></td>
+                    <td th:text="${count.name}"></td>
+                    <td th:text="${count.money}"></td>
+                    <td th:text="${count.date}"></td>
+                    <td th:text="${count.phonenumber}"></td>
+                </tr>
+
+            </table>
+            <button th:type="submit" >合计</button>
+
+        </form>
+
+
+
+    </center>
+
+</div>
+
 </body>
 </html>
