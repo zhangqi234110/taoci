@@ -31,6 +31,13 @@ public class CountController {
     }
 
 
+    @RequestMapping("/hello1")
+    public String aa(){
+        String aa="这是同时新添加的";
+        return aa;
+    }
+
+    
     @RequestMapping("/list")
     public String list(@RequestParam("name") String name, @RequestParam("password") String password, Model model){
         User login = userService.login(name, password);
