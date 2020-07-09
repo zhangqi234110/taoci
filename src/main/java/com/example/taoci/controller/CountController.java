@@ -25,7 +25,7 @@ public class CountController {
     private CountService countService;
 
     @RequestMapping("/hello")
-    public String aa(){
+    public String bb(){
         return null;
     }
 
