@@ -32,8 +32,8 @@ public class CountController {
 
 
     @RequestMapping("/hello1")
-    public String xs() {
-        String aa = "这是同时新添加的";
+    public String bb(){
+        String aa="这是同时新添加的";
         return aa;
     }
     @RequestMapping("/hello2")
