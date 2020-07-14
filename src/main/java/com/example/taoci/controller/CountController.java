@@ -38,7 +38,7 @@ public class CountController {
     }
     @RequestMapping("/hello2")
     public String de(){
-        String qw="这是我新添加的";
+        String qw="这是我新阿斯顿的";
         return qw;
     }
 
