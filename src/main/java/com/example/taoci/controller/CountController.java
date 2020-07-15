@@ -43,6 +43,12 @@ public class CountController {
     }
 
 
+    @RequestMapping("/hello5")
+    public String sdas(){
+
+        return "nisd s";
+    }
+
 
 
     @RequestMapping("/list")
