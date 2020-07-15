@@ -42,6 +42,11 @@ public class CountController {
         return qw;
     }
 
+    @RequestMapping("/hello3")
+    public String wa(){
+        String qw="的人烦烦烦";
+        return qw;
+    }
 
     @RequestMapping("/hello5")
     public String sdas(){
