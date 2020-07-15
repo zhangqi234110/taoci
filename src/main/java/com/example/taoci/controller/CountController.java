@@ -44,7 +44,7 @@ public class CountController {
 
     @RequestMapping("/hello3")
     public String wa(){
-        String qw="的人烦烦烦";
+        String qw="我得如同一条";
         return qw;
     }
 
