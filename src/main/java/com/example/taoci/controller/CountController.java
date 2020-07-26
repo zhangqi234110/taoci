@@ -92,7 +92,7 @@ public class CountController {
     @RequestMapping("/red2")
     public String we(@ModelAttribute("name") String name){
         System.out.println(name);
-        return "success";
+        return "error";
     }
 
 
