@@ -4,11 +4,14 @@ import com.example.taoci.pojo.Count;
 import com.example.taoci.pojo.User;
 import com.example.taoci.service.CountService;
 import com.example.taoci.service.UserService;
+import com.example.taoci.util.JedisTool;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -62,6 +65,7 @@ public class CountController {
         if (login==null){
             return "error";
         }else {
+            String set = JedisTool.jedisset().set(name, name);
             ArrayList<Object> list = new ArrayList<>();
             List<Count> all = countService.findAll();
             String myname = login.getName();
@@ -76,6 +80,20 @@ public class CountController {
 
             return "success";
         }
-
     }
+
+    @RequestMapping("/red")
+    public String de(RedirectAttributes redirectAttributes){
+        //redirectAttributes.addAttribute("name","张三");
+       redirectAttributes.addFlashAttribute("name","张三");
+        return "redirect:/zhangdan/red2";
+    }
+
+    @RequestMapping("/red2")
+    public String we(@ModelAttribute("name") String name){
+        System.out.println(name);
+        return "success";
+    }
+
+
 }
